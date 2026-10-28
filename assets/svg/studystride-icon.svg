@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Study Stride"><title>Study Stride</title>
+<rect width="64" height="64" rx="14" fill="#1C4B46"/>
+<rect x="12" y="24" width="26" height="30" rx="5" fill="#2E8B7A"/>
+<rect x="22" y="16" width="26" height="32" rx="5" fill="#FFFFFF"/>
+<rect x="27" y="22" width="8" height="3" rx="1.5" fill="#2E8B7A"/>
+<rect x="27" y="30" width="16" height="3" rx="1.5" fill="#9ED3C3"/>
+<rect x="27" y="36" width="16" height="3" rx="1.5" fill="#9ED3C3"/>
+<rect x="27" y="42" width="10" height="3" rx="1.5" fill="#9ED3C3"/>
+<circle cx="46" cy="18" r="10.5" fill="#1C4B46"/>
+<circle cx="46" cy="18" r="8.5" fill="#F4B63F"/>
+<path d="M42 18.3L44.8 21.1L50 15.4" fill="none" stroke="#1C4B46" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
