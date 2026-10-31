@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="80 50 300 310" role="img" aria-label="Geography">
+  <title>Geography</title>
+  <!-- Temporary Geography icon, drawn in the same line-art frame as the SOR pattern. -->
+  <g fill="none" stroke="#1C4B46" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="230" cy="200" r="150" stroke-width="1.4" stroke-dasharray="2 7"/>
+    <circle cx="230" cy="200" r="104" stroke-width="1.2"/>
+    <g stroke-width="1.7">
+      <circle cx="145" cy="108" r="24"/>
+      <path d="M145 78 v60 M115 108 h60"/>
+      <path d="M145 86 l7 16 h-14 z"/>
+      <path d="M128 96 l10 12 -10 12 M162 96 l-10 12 10 12"/>
+      <path d="M292 156 l24 -40 16 26 18 -22 22 48 h-92 z"/>
+      <path d="M108 228 q20 -14 40 0 t40 0"/>
+      <path d="M100 246 q22 -14 44 0 t44 0"/>
+      <path d="M116 264 q16 -12 32 0 t32 0"/>
+      <path d="M314 186 c0 -16 24 -16 24 0 c0 14 -12 20 -12 30 c0 -10 -12 -16 -12 -30 z"/>
+      <circle cx="326" cy="184" r="4.5"/>
+    </g>
+  </g>
+  <text x="214" y="214" text-anchor="middle" fill="#1C4B46" font-size="28" font-family="Lexend, Segoe UI, sans-serif" font-weight="700">N</text>
+</svg>
