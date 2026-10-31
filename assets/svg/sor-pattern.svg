@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="80 50 300 310" role="img" aria-label="Studies of Religion">
+  <title>Studies of Religion</title>
+  <g fill="none" stroke="#1C4B46" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="230" cy="200" r="150" stroke-width="1.4" stroke-dasharray="2 7"/>
+    <circle cx="230" cy="200" r="104" stroke-width="1.2"/>
+    <g stroke-width="1.7">
+      <path d="M230 62 v54 M208 84 h44"/>
+      <path d="M332 118 a26 26 0 1 0 8 48 a20 20 0 1 1 -8 -48z"/>
+      <path d="M356 108 l4 8 8 1 -6 6 2 8 -8-4 -8 4 2-8 -6-6 8-1z"/>
+      <polygon points="168,88.9 188,123.5 148,123.5"/>
+      <polygon points="168,135.1 148,100.5 188,100.5"/>
+      <circle cx="120" cy="168" r="22"/>
+      <path d="M120 146 v44 M98 168 h44 M104 152 l32 32 M136 152 l-32 32"/>
+    </g>
+  </g>
+  <text x="214" y="218" text-anchor="middle" fill="#1C4B46" font-size="48" font-family="Noto Serif Devanagari, serif">&#x0950;</text>
+</svg>

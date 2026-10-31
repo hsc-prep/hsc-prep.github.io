@@ -1,15 +1,15 @@
-Study Stride logo pack
-======================
+StudyStrides logo pack
+=======================
 
 Which file to use
 -----------------
 svg/  Use these on the website wherever you can. They stay sharp at any size.
 png/  Use these where SVG isn't accepted (Word, PowerPoint, Canva, email, social media).
 
-  studystride-large     Stacked logo with tagline. Landing page, booklet covers, posters.
-  studystride-medium    Horizontal logo. Website header / nav bar.
-  studystride-mark      The papers-and-tick symbol on its own.
-  studystride-icon      The symbol in a rounded tile. Profile pictures, app icon.
+  studystrides-large     Stacked logo with tagline. Landing page, booklet covers, posters.
+  studystrides-medium    Horizontal logo. Website header / nav bar.
+  studystrides-mark      The papers-and-tick symbol on its own.
+  studystrides-icon      The symbol in a rounded tile. Profile pictures, app icon.
 
   Files ending "-dark" are for dark backgrounds (e.g. the Night banner or footer).
   All logo files have transparent backgrounds.
@@ -20,20 +20,17 @@ favicon/  Browser tab and phone home-screen icons. Upload them to the site's
 
 Product names
 -------------
-Brand: Study Stride
-
-Student-facing course names:
-Study Strides – HSC SOR
-Study Strides – HSC Geography
+StudyStrides · HSC Geography
+StudyStrides · HSC SOR
 
 
 Suggested website layout
 ------------------------
-Header:   white, with studystride-medium.svg on the left (about 44-48 px tall)
+Header:   white, with studystrides-medium.svg on the left (about 44-48 px tall)
           and a thin Line-coloured border underneath.
 Hero:     a Night banner, with the dark mark as the illustration.
 Body:     white pages; white cards with a Line border; Mist for alternate sections.
-Footer:   Night, with studystride-medium-dark.svg.
+Footer:   Night, with studystrides-medium-dark.svg.
 Buttons:  Marigold with Pine text for the main action (e.g. Subscribe).
 
 
@@ -47,7 +44,7 @@ icon-192.png and icon-512.png are the sizes an installable web app (PWA)
 manifest asks for.
 
 Header logo example:
-<img src="studystride-medium.svg" alt="Study Stride" height="44">
+<img src="studystrides-medium.svg" alt="StudyStrides" height="44">
 
 
 Colours
@@ -65,7 +62,7 @@ Font
 ----
 Lexend (free from Google Fonts). The logo lettering is converted to shapes,
 so the logo files display correctly without the font installed.
-Wordmark: "Study" in Lexend Medium (Teal), "Stride" in Lexend Bold (Pine).
+Wordmark: "Study" in Lexend Medium (Teal), "Strides" in Lexend Bold (Pine).
 Tagline: "Smart steps. Strong results." in Lexend Regular.
 
 Clear space

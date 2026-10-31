@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Us · StudyStrides</title>
+<meta name="description" content="Contact StudyStrides. Send a message to the team.">
+<meta property="og:title" content="Contact Us · StudyStrides">
+<meta property="og:description" content="Send a message to StudyStrides.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hsc-prep.github.io/contact/">
+<meta property="og:image" content="https://hsc-prep.github.io/assets/png/studystrides-large.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact Us · StudyStrides">
+<meta name="twitter:description" content="Send a message to StudyStrides.">
+<meta name="twitter:image" content="https://hsc-prep.github.io/assets/png/studystrides-large.png">
+<meta name="theme-color" content="#123532">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="../">
+      <img src="../assets/svg/studystrides-medium.svg" alt="StudyStrides" width="253" height="46">
+    </a>
+    <nav class="site-nav" aria-label="Course sites">
+      <a href="../sor/">StudyStrides · HSC SOR</a>
+      <a href="../geo/">StudyStrides · HSC Geography</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <div class="wrap prose">
+    <h1>Contact Us</h1>
+    <p>Send a message to the StudyStrides team. We reply by email.</p>
+    <div id="thanks" class="sent" hidden>
+      <p><strong>Message sent.</strong> Thank you. We will reply by email.</p>
+    </div>
+    <!--
+      Posts to hsc.prep.site@gmail.com via FormSubmit. No API key is stored.
+      Before the first real delivery, Paul must open the confirmation email
+      FormSubmit sends to that address. See README.md.
+    -->
+    <form id="contact-form" class="form" action="https://formsubmit.co/hsc.prep.site@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="StudyStrides contact">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://hsc-prep.github.io/contact/?sent=1">
+      <p class="honey">
+        <label>Leave this field empty<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label>
+      </p>
+      <label>Name
+        <input type="text" name="name" autocomplete="name" required maxlength="120">
+      </label>
+      <label>Email
+        <input type="email" name="email" autocomplete="email" required maxlength="200">
+      </label>
+      <label>Message
+        <textarea name="message" required maxlength="5000"></textarea>
+      </label>
+      <button class="button" type="submit">Send</button>
+      <p class="form-note">Your message is emailed to the StudyStrides team.</p>
+    </form>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <nav class="footer-nav" aria-label="Site">
+      <a href="../about/">About Us</a>
+      <a href="./" aria-current="page">Contact Us</a>
+    </nav>
+  </div>
+</footer>
+<script>
+  if (new URLSearchParams(location.search).has("sent")) {
+    document.getElementById("thanks").hidden = false;
+    document.getElementById("contact-form").hidden = true;
+  }
+</script>
+</body>
+</html>
