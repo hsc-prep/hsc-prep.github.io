@@ -132,8 +132,8 @@ img { max-width: 100%; }
 
 .courses {
   background: var(--mist);
-  flex: 1 0 auto;
-  padding: 40px 22px 56px;
+  flex: 0 0 auto;
+  padding: 40px 22px 40px;
 }
 
 .courses-inner {
@@ -288,11 +288,55 @@ img { max-width: 100%; }
 
 .sent p { margin: 0; }
 
+.about-marks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  align-items: center;
+  margin: 36px 0 0;
+}
+
+.about-marks img {
+  display: block;
+  width: 104px;
+  height: auto;
+}
+
+.contact-box {
+  position: relative;
+  overflow: hidden;
+  max-width: 36rem;
+  margin-top: 8px;
+  padding: 20px 22px 22px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+
+.contact-box > *:not(.wm) {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-box .form { max-width: none; margin-top: 0; }
+
+.contact-box .wm {
+  position: absolute;
+  z-index: 0;
+  width: 260px;
+  height: auto;
+  opacity: 0.07;
+  pointer-events: none;
+}
+
+.contact-box .wm-sor { top: -56px; right: -70px; }
+.contact-box .wm-geo { bottom: -84px; left: -84px; }
+
 .site-footer {
   background: var(--night);
   color: var(--mist);
   border-top: 1px solid rgba(158, 211, 195, 0.28);
-  padding: 14px 0;
+  padding: 0;
   margin-top: auto;
 }
 
@@ -374,7 +418,7 @@ img { max-width: 100%; }
 .page-stub main a { color: var(--marigold); }
 
 @media (max-width: 800px) {
-  .courses { padding: 24px 16px 32px; }
+  .courses { padding: 24px 16px 24px; }
   .courses-inner {
     grid-template-columns: 1fr;
     width: min(560px, 100%);

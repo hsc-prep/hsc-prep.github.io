@@ -39,35 +39,40 @@
 <main class="page">
   <div class="wrap prose">
     <h1>Contact Us</h1>
-    <p>Send a message to the StudyStrides team. We reply by email.</p>
-    <div id="thanks" class="sent" hidden>
-      <p><strong>Message sent.</strong> Thank you. We will reply by email.</p>
+    <p>Send a message to the StudyStrides team.</p>
+    <div class="contact-box">
+      <img class="wm wm-sor" src="../assets/svg/sor-pattern.svg" alt="" aria-hidden="true" width="260" height="270">
+      <img class="wm wm-geo" src="../assets/svg/geo-pattern.svg" alt="" aria-hidden="true" width="260" height="270">
+      <div id="thanks" class="sent" hidden>
+        <p><strong>Message sent.</strong> Thank you. We will reply by email.</p>
+      </div>
+      <!--
+        Posts to support@studystrides.com.au via FormSubmit. No API key is stored.
+        The address will later be swapped for an alias (see README.md).
+        Before the first real delivery, the confirmation email FormSubmit sends
+        to that address must be opened.
+      -->
+      <form id="contact-form" class="form" action="https://formsubmit.co/support@studystrides.com.au" method="POST">
+        <input type="hidden" name="_subject" value="StudyStrides contact">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://hsc-prep.github.io/contact/?sent=1">
+        <p class="honey">
+          <label>Leave this field empty<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label>
+        </p>
+        <label>Name
+          <input type="text" name="name" autocomplete="name" required maxlength="120">
+        </label>
+        <label>Email
+          <input type="email" name="email" autocomplete="email" required maxlength="200">
+        </label>
+        <label>Message
+          <textarea name="message" required maxlength="5000"></textarea>
+        </label>
+        <button class="button" type="submit">Send</button>
+        <p class="form-note">Your message is emailed to the StudyStrides team. We reply by email.</p>
+      </form>
     </div>
-    <!--
-      Posts to hsc.prep.site@gmail.com via FormSubmit. No API key is stored.
-      Before the first real delivery, Paul must open the confirmation email
-      FormSubmit sends to that address. See README.md.
-    -->
-    <form id="contact-form" class="form" action="https://formsubmit.co/hsc.prep.site@gmail.com" method="POST">
-      <input type="hidden" name="_subject" value="StudyStrides contact">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://hsc-prep.github.io/contact/?sent=1">
-      <p class="honey">
-        <label>Leave this field empty<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label>
-      </p>
-      <label>Name
-        <input type="text" name="name" autocomplete="name" required maxlength="120">
-      </label>
-      <label>Email
-        <input type="email" name="email" autocomplete="email" required maxlength="200">
-      </label>
-      <label>Message
-        <textarea name="message" required maxlength="5000"></textarea>
-      </label>
-      <button class="button" type="submit">Send</button>
-      <p class="form-note">Your message is emailed to the StudyStrides team.</p>
-    </form>
   </div>
 </main>
 
