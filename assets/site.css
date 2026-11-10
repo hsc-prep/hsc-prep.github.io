@@ -226,6 +226,36 @@ img { max-width: 100%; }
   margin: 0 0 14px;
 }
 
+.prose ul,
+.prose ol {
+  margin: 0 0 14px;
+  padding-left: 1.35rem;
+}
+
+.prose li {
+  margin: 0 0 6px;
+}
+
+.prose li:last-child {
+  margin-bottom: 0;
+}
+
+.prose a {
+  color: var(--teal);
+  font-weight: 600;
+  text-underline-offset: 3px;
+}
+
+.prose a:hover {
+  color: var(--pine);
+}
+
+.legal-meta {
+  color: var(--muted);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
 .form {
   display: grid;
   gap: 14px;
