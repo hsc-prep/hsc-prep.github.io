@@ -8,6 +8,9 @@ Live at [studystrides.com.au](https://studystrides.com.au/) (the `CNAME` file se
 - [StudyStrides · HSC Geography](https://studystrides.com.au/geography/) shows the Geography "coming soon" page.
 - [About Us](https://studystrides.com.au/about/)
 - [Contact Us](https://studystrides.com.au/contact/)
+- [Privacy Notice](https://studystrides.com.au/privacy/)
+- [Terms of Access](https://studystrides.com.au/terms/)
+- [Refunds and Cancellations](https://studystrides.com.au/refunds/)
 
 Logo files live in `assets/`. Favicons sit in the site root.
 
