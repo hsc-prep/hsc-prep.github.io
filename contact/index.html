@@ -37,26 +37,22 @@
 </header>
 
 <main class="page">
-  <div class="wrap prose">
-    <h1>Contact Us</h1>
-    <p>Send a message to the StudyStrides team.</p>
+  <div class="wrap contact-wrap">
+    <div class="prose">
+      <h1>Contact Us</h1>
+      <p>Send a message to the StudyStrides team.</p>
+    </div>
+    <div class="contact-layout">
     <div class="contact-box">
-      <img class="wm wm-sor" src="../assets/svg/sor-pattern.svg" alt="" aria-hidden="true" width="260" height="270">
-      <img class="wm wm-geo" src="../assets/svg/geo-pattern.svg" alt="" aria-hidden="true" width="260" height="270">
       <div id="thanks" class="sent" hidden>
         <p><strong>Message sent.</strong> Thank you. We will reply by email.</p>
       </div>
-      <!--
-        Posts to support@studystrides.com.au via FormSubmit. No API key is stored.
-        The address will later be swapped for an alias (see README.md).
-        Before the first real delivery, the confirmation email FormSubmit sends
-        to that address must be opened.
-      -->
-      <form id="contact-form" class="form" action="https://formsubmit.co/support@studystrides.com.au" method="POST">
+      <!-- Posts via FormSubmit using the activated alias string, so no email address appears in the page. -->
+      <form id="contact-form" class="form" action="https://formsubmit.co/5f8900beea31229b72fd30f6505961b3" method="POST">
         <input type="hidden" name="_subject" value="StudyStrides contact">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://hsc-prep.github.io/contact/?sent=1">
+        <input type="hidden" name="_next" value="https://studystrides.com.au/contact/?sent=1">
         <p class="honey">
           <label>Leave this field empty<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label>
         </p>
@@ -72,6 +68,11 @@
         <button class="button" type="submit">Send</button>
         <p class="form-note">Your message is emailed to the StudyStrides team. We reply by email.</p>
       </form>
+    </div>
+    <div class="contact-side" aria-hidden="true">
+      <img src="../assets/svg/sor-pattern.svg" alt="" width="168" height="174">
+      <img src="../assets/svg/geo-pattern.svg" alt="" width="168" height="174">
+    </div>
     </div>
   </div>
 </main>
