@@ -332,6 +332,43 @@ img { max-width: 100%; }
 .contact-box .wm-sor { top: -56px; right: -70px; }
 .contact-box .wm-geo { bottom: -84px; left: -84px; }
 
+.contact-wrap {
+  width: fit-content;
+  max-width: min(56rem, calc(100% - 28px));
+}
+
+.contact-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+}
+
+.contact-layout > .prose { flex: 1 1 36rem; }
+.contact-layout > .prose p { text-align: justify; }
+
+.contact-layout .contact-box { flex: 1 1 36rem; margin-top: 8px; }
+
+.contact-side {
+  flex: none;
+  display: grid;
+  gap: 28px;
+  justify-items: center;
+  padding-top: 18px;
+}
+
+.contact-side img {
+  display: block;
+  width: 168px;
+  height: auto;
+}
+
+@media (max-width: 800px) {
+  .contact-layout { flex-direction: column; gap: 24px; }
+  .contact-layout .contact-box { flex: none; width: 100%; }
+  .contact-side { grid-auto-flow: column; padding-top: 0; gap: 24px; }
+  .contact-side img { width: 120px; }
+}
+
 .site-footer {
   background: var(--night);
   color: var(--mist);
