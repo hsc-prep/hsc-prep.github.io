@@ -226,36 +226,6 @@ img { max-width: 100%; }
   margin: 0 0 14px;
 }
 
-.prose ul,
-.prose ol {
-  margin: 0 0 14px;
-  padding-left: 1.35rem;
-}
-
-.prose li {
-  margin: 0 0 6px;
-}
-
-.prose li:last-child {
-  margin-bottom: 0;
-}
-
-.prose a {
-  color: var(--teal);
-  font-weight: 600;
-  text-underline-offset: 3px;
-}
-
-.prose a:hover {
-  color: var(--pine);
-}
-
-.legal-meta {
-  color: var(--muted);
-  font-weight: 500;
-  font-size: 0.95rem;
-}
-
 .form {
   display: grid;
   gap: 14px;
@@ -521,4 +491,33 @@ img { max-width: 100%; }
   .wrap { width: calc(100% - 16px); }
   .page { padding: 32px 0 56px; }
   .card h2 { font-size: 1.08rem; }
+}
+
+/* Right of the footer: ABN and a link to the Terms page (which links to Privacy and Refunds). */
+.footer-legal { justify-self: end; display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 2px 14px; font-size: 0.75rem; color: #F1F7F5; }
+.footer-icon { display: block; width: 16px; height: 16px; margin-right: -6px; }
+.footer-abn { white-space: nowrap; opacity: 0.85; }
+.footer-terms { color: #fff; font-weight: 600; text-decoration: none; }
+.footer-terms:hover { text-decoration: underline; text-decoration-color: #F4B63F; text-underline-offset: 3px; }
+.footer-terms:focus-visible { outline: 3px solid #9ED3C3; outline-offset: 3px; }
+@media (max-width: 720px) {
+  .footer-legal { flex-direction: column; align-items: flex-end; gap: 3px; font-size: 0.7rem; }
+}
+.legal-related { margin: 6px 0 18px; font-size: 0.92rem; }
+
+/* Banner tagline: full sentence on wider screens, short version on phones. */
+.tagline-short { display: none; }
+@media (max-width: 720px) {
+  .tagline-full { display: none; }
+  .tagline-short { display: inline; }
+}
+
+/* Bigger icon and ABN/Terms text; the gap between About Us and Contact Us widens to match, so both sides of the footer are the same width. */
+.footer-icon { width: 22px; height: 22px; margin-right: -4px; }
+@media (min-width: 721px) {
+  .footer-legal { font-size: 0.84rem; column-gap: 12px; }
+  .footer-nav { column-gap: 47px; }
+}
+@media (max-width: 720px) {
+  .footer-icon { width: 18px; height: 18px; margin-right: 0; }
 }
