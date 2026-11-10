@@ -25,6 +25,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/site.css">
+<script src="/assets/clarity.js"></script>
 </head>
 <body>
 <header class="site-header">
@@ -54,16 +55,16 @@
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_next" value="https://studystrides.com.au/contact/?sent=1">
         <p class="honey">
-          <label>Leave this field empty<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label>
+          <label>Leave this field empty<input type="text" name="_honey" tabindex="-1" autocomplete="off" data-clarity-mask="true"></label>
         </p>
         <label>Name
-          <input type="text" name="name" autocomplete="name" required maxlength="120">
+          <input type="text" name="name" autocomplete="name" required maxlength="120" data-clarity-mask="true">
         </label>
         <label>Email
-          <input type="email" name="email" autocomplete="email" required maxlength="200">
+          <input type="email" name="email" autocomplete="email" required maxlength="200" data-clarity-mask="true">
         </label>
         <label>Message
-          <textarea name="message" required maxlength="5000"></textarea>
+          <textarea name="message" required maxlength="5000" data-clarity-mask="true"></textarea>
         </label>
         <button class="button" type="submit">Send</button>
         <p class="form-note">Your message is emailed to the StudyStrides team. We reply by email.</p>
