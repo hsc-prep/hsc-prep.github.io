@@ -521,3 +521,9 @@ img { max-width: 100%; }
 @media (max-width: 720px) {
   .footer-icon { width: 18px; height: 18px; margin-right: 0; }
 }
+
+/* Contact Us: less space above the title and before the footer. */
+.page-contact { padding: 20px 0 28px; }
+@media (max-width: 480px) {
+  .page-contact { padding: 16px 0 24px; }
+}
