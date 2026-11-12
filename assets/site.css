@@ -527,3 +527,18 @@ img { max-width: 100%; }
 @media (max-width: 480px) {
   .page-contact { padding: 16px 0 24px; }
 }
+
+/* Contact Us: a shorter form so the whole page fits on a laptop screen.
+   Name and Email sit side by side, and the message box starts small;
+   students can drag its corner to make it taller. */
+.page-contact .prose p { margin-bottom: 8px; }
+.page-contact .form { gap: 10px; }
+.page-contact .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.page-contact .form input,
+.page-contact .form textarea { padding: 10px 12px; }
+.page-contact .form textarea { min-height: 0; height: 96px; resize: vertical; }
+.page-contact .contact-side { gap: 18px; padding-top: 8px; }
+.page-contact .contact-side img { width: 132px; }
+@media (max-width: 560px) {
+  .page-contact .form-row { grid-template-columns: 1fr; }
+}

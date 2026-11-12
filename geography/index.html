@@ -52,6 +52,30 @@
   article h2 { margin: 0 0 8px; font-size: 1.2rem; }
   article p { margin: 0; line-height: 1.45; color: #3d453c; }
   @media (max-width: 800px) { .grid { grid-template-columns: 1fr; } .hero-symbols { opacity: .45; } }
+  /* Shared site footer (same as the other hub pages; this page does not load site.css) */
+  .site-footer { background:#123532; color:#F1F7F5; border-top:1px solid rgba(158,211,195,.28); line-height:1.55; }
+  .site-footer .wrap { width:min(1040px, calc(100% - 28px)); margin-inline:auto; }
+  .footer-bar { display:grid; grid-template-columns:minmax(0,1fr) auto minmax(0,1fr); align-items:center; column-gap:16px; min-height:52px; }
+  .footer-nav { display:flex; gap:8px 47px; flex-wrap:wrap; align-items:center; min-height:32px; }
+  .footer-nav a { color:#fff; font-weight:600; text-decoration:none; padding:6px 0; }
+  .footer-nav a:hover { text-decoration:underline; text-decoration-color:#F4B63F; text-underline-offset:4px; }
+  .footer-tagline { margin:0; justify-self:center; text-align:center; color:#F1F7F5; font-size:.8rem; line-height:1.35; letter-spacing:.01em; }
+  .footer-tagline-break { display:none; }
+  .footer-legal { justify-self:end; display:flex; flex-wrap:wrap; align-items:center; justify-content:flex-end; gap:2px 12px; font-size:.84rem; color:#F1F7F5; }
+  .footer-icon { display:block; width:22px; height:22px; margin-right:-4px; }
+  .footer-abn { white-space:nowrap; opacity:.85; }
+  .footer-terms { color:#fff; font-weight:600; text-decoration:none; }
+  .footer-terms:hover { text-decoration:underline; text-decoration-color:#F4B63F; text-underline-offset:3px; }
+  .site-footer a:focus-visible { outline:3px solid #9ED3C3; outline-offset:3px; }
+  @media (max-width: 720px) {
+    .footer-bar { column-gap:10px; }
+    .footer-nav { flex-direction:column; align-items:flex-start; gap:0; }
+    .footer-tagline { font-size:.72rem; }
+    .footer-tagline-break { display:block; }
+    .footer-legal { flex-direction:column; align-items:flex-end; gap:3px; font-size:.7rem; }
+    .footer-icon { width:18px; height:18px; margin-right:0; }
+  }
+  @media (max-width: 480px) { .site-footer .wrap { width:calc(100% - 16px); } }
 </style>
 <script src="/assets/clarity.js"></script>
 </head>
@@ -112,5 +136,15 @@
     </article>
   </div>
 </main>
+<footer class="site-footer">
+  <div class="wrap footer-bar">
+    <nav class="footer-nav" aria-label="Site">
+      <a href="../about/">About Us</a>
+      <a href="../contact/">Contact Us</a>
+    </nav>
+    <p class="footer-tagline">Smart Steps. <br class="footer-tagline-break">Strong Results</p>
+    <div class="footer-legal"><img class="footer-icon" src="../assets/svg/studystrides-icon.svg" alt="" width="16" height="16"><span class="footer-abn">ABN 55 179 267 733</span><a class="footer-terms" href="../terms/">Terms</a></div>
+  </div>
+</footer>
 </body>
 </html>
