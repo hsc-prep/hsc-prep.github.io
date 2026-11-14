@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For Schools · StudyStrides</title>
+<meta name="description" content="Request a school invoice for StudyStrides HSC study subscriptions.">
+<meta property="og:title" content="For Schools · StudyStrides">
+<meta property="og:description" content="Request a school invoice for StudyStrides HSC study subscriptions.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://studystrides.com.au/schools/">
+<meta property="og:image" content="https://studystrides.com.au/assets/png/studystrides-large.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="For Schools · StudyStrides">
+<meta name="twitter:description" content="Request a school invoice for StudyStrides HSC study subscriptions.">
+<meta name="twitter:image" content="https://studystrides.com.au/assets/png/studystrides-large.png">
+<meta name="theme-color" content="#123532">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+<style>
+  .form select {
+    font: inherit;
+    color: var(--pine);
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 12px 14px;
+    width: 100%;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%231C4B46' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 36px;
+  }
+  .form select:focus-visible {
+    outline: 3px solid var(--mint);
+    outline-offset: 2px;
+  }
+  .page-schools { padding: 20px 0 28px; }
+  .page-schools .prose { max-width: 36rem; }
+  .page-schools .prose p { margin-bottom: 8px; }
+  .page-schools .form { gap: 10px; }
+  .page-schools .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .page-schools .form input,
+  .page-schools .form select,
+  .page-schools .form textarea { padding: 10px 12px; }
+  .page-schools .form select { padding-right: 36px; }
+  .page-schools .form textarea { min-height: 0; height: 120px; resize: vertical; }
+  .schools-wrap { width: min(1040px, calc(100% - 28px)); margin-inline: auto; }
+  .schools-layout { display: flex; gap: 32px; align-items: flex-start; }
+  .schools-layout > .schools-box { flex: 1 1 36rem; }
+  .schools-layout > .schools-info { flex: 0 0 280px; }
+  .schools-box {
+    background: var(--mist); border: 1px solid var(--line); border-radius: 20px; padding: 24px 26px;
+    box-shadow: 0 14px 30px rgba(28,44,34,.06); position: relative;
+  }
+  .schools-box > *:not(.wm) { position: relative; z-index: 1; }
+  .schools-box .form { max-width: none; margin-top: 0; }
+  .schools-info {
+    display: grid; gap: 18px; padding-top: 8px;
+  }
+  .info-card {
+    background: var(--mist); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px;
+  }
+  .info-card h3 { margin: 0 0 6px; font-size: 1rem; }
+  .info-card p, .info-card ul { margin: 0; font-size: .92rem; color: var(--muted); line-height: 1.5; }
+  .info-card ul { padding-left: 18px; margin-top: 4px; }
+  @media (max-width: 720px) {
+    .schools-layout { flex-direction: column; gap: 24px; }
+    .schools-layout > .schools-info { flex: none; width: 100%; }
+    .page-schools .form-row { grid-template-columns: 1fr; }
+  }
+</style>
+<script src="/assets/clarity.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="../">
+      <img src="../assets/svg/studystrides-medium.svg" alt="StudyStrides" width="253" height="46">
+    </a>
+    <p class="site-tagline"><span class="tagline-full">Learning and study resources crafted by experts, effective&nbsp;for&nbsp;students</span><span class="tagline-short">Study resources crafted by experts</span></p>
+  </div>
+</header>
+
+<main class="page page-schools">
+  <div class="schools-wrap">
+    <div class="prose">
+      <h1>For Schools</h1>
+      <p>Request an invoice for student subscriptions. We will send a tax invoice to your school and set up student accounts once payment is received.</p>
+    </div>
+    <div class="schools-layout">
+    <div class="schools-box">
+      <div id="thanks" class="sent" hidden>
+        <p><strong>Request sent.</strong> Thank you. We will be in touch with an invoice and account details.</p>
+      </div>
+      <!-- Posts via FormSubmit using the activated alias string, so no email address appears in the page. -->
+      <form id="schools-form" class="form" action="https://formsubmit.co/5f8900beea31229b72fd30f6505961b3" method="POST">
+        <input type="hidden" name="_subject" value="StudyStrides school invoice request">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://studystrides.com.au/schools/?sent=1">
+        <p class="honey">
+          <label>Leave this field empty<input type="text" name="_honey" tabindex="-1" autocomplete="off" data-clarity-mask="true"></label>
+        </p>
+        <div class="form-row">
+          <label>School name
+            <input type="text" name="school" required maxlength="200" data-clarity-mask="true">
+          </label>
+          <label>Course
+            <select name="course" required>
+              <option value="" disabled selected>Select a course</option>
+              <option value="Studies of Religion HSC">Studies of Religion HSC</option>
+              <option value="Geography HSC">Geography HSC</option>
+            </select>
+          </label>
+        </div>
+        <div class="form-row">
+          <label>Contact name
+            <input type="text" name="name" autocomplete="name" required maxlength="120" data-clarity-mask="true">
+          </label>
+          <label>Contact email
+            <input type="email" name="email" autocomplete="email" required maxlength="200" data-clarity-mask="true">
+          </label>
+        </div>
+        <label>Student email addresses
+          <textarea name="student_emails" rows="5" required maxlength="10000" placeholder="One email per line" data-clarity-mask="true"></textarea>
+        </label>
+        <p class="form-note">List the student email addresses to create accounts for, one per line.</p>
+        <button class="button" type="submit">Send request</button>
+      </form>
+    </div>
+    <div class="schools-info">
+      <div class="info-card">
+        <h3>What happens next</h3>
+        <ul>
+          <li>We send a tax invoice to your school</li>
+          <li>Once payment is received, student accounts are created</li>
+          <li>Students receive a login email with access instructions</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3>Available courses</h3>
+        <p><strong>Studies of Religion HSC</strong> — content notes, 500+ practice multis, full practice exams and more.</p>
+        <p style="margin-top:8px"><strong>Geography HSC</strong> — content notes, geographical skills, practice questions, full practice exams and more.</p>
+      </div>
+    </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-bar">
+    <nav class="footer-nav" aria-label="Site">
+      <a href="../about/">About Us</a>
+      <a href="../contact/">Contact Us</a>
+    </nav>
+    <p class="footer-tagline">Smart Steps. <br class="footer-tagline-break">Strong Results</p>
+    <div class="footer-legal"><img class="footer-icon" src="../assets/svg/studystrides-icon.svg" alt="" width="16" height="16"><span class="footer-abn">ABN 55 179 267 733</span><a class="footer-terms" href="../terms/">Terms</a></div>
+  </div>
+</footer>
+<script>
+  if (new URLSearchParams(location.search).has("sent")) {
+    document.getElementById("thanks").hidden = false;
+    document.getElementById("schools-form").hidden = true;
+  }
+</script>
+</body>
+</html>

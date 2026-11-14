@@ -539,6 +539,9 @@ img { max-width: 100%; }
 .page-contact .form textarea { min-height: 0; height: 96px; resize: vertical; }
 .page-contact .contact-side { gap: 18px; padding-top: 8px; }
 .page-contact .contact-side img { width: 132px; }
+/* Use the full page width (same as the header), so the form is wide rather than tall. */
+.page-contact .contact-wrap { width: min(1040px, calc(100% - 28px)); max-width: none; }
+.page-contact .contact-layout .contact-box { flex: 1 1 auto; max-width: none; }
 @media (max-width: 560px) {
   .page-contact .form-row { grid-template-columns: 1fr; }
 }
