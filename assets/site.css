@@ -132,8 +132,12 @@ img { max-width: 100%; }
 
 .courses {
   background: var(--mist);
-  flex: 0 0 auto;
-  padding: 40px 22px 40px;
+  /* Fill any leftover height so a tall window shows more page background rather
+     than a white band between the bar and the footer. */
+  flex: 1 0 auto;
+  /* One narrow gap everywhere: banner to tiles, tiles to the "For schools" bar,
+     and the bar to the footer are all 24px. */
+  padding: 24px 22px 24px;
 }
 
 .courses-inner {
@@ -141,7 +145,7 @@ img { max-width: 100%; }
   margin-inline: auto;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 22px;
+  gap: 24px;
   align-items: stretch;
 }
 
@@ -544,4 +548,21 @@ img { max-width: 100%; }
 .page-contact .contact-layout .contact-box { flex: 1 1 auto; max-width: none; }
 @media (max-width: 560px) {
   .page-contact .form-row { grid-template-columns: 1fr; }
+}
+
+/* "For schools" bar under the course cards: half the width of the tiles area, with
+   the same 24px gap above and below it as everywhere else on the page. */
+.schools-cta {
+  width: min(1120px, 100%);
+  margin: 24px auto 0;
+  text-align: center;
+}
+.schools-cta .button {
+  width: 50%;
+  margin: 0 auto;
+  font-size: 0.95rem;
+  padding: 10px 22px;
+}
+@media (max-width: 800px) {
+  .schools-cta .button { width: 100%; }
 }
