@@ -44,15 +44,15 @@
     </div>
     <div class="contact-layout">
     <div class="contact-box">
+      <div id="form-error" class="form-error" hidden>
+        <p><strong>Message not sent.</strong> Please try again, or email <a href="mailto:support@studystrides.com.au">support@studystrides.com.au</a>.</p>
+      </div>
       <div id="thanks" class="sent" hidden>
         <p><strong>Message sent.</strong> Thank you. We will reply by email.</p>
       </div>
-      <!-- Posts via FormSubmit using the activated alias string, so no email address appears in the page. -->
-      <form id="contact-form" class="form" action="https://formsubmit.co/5f8900beea31229b72fd30f6505961b3" method="POST">
-        <input type="hidden" name="_subject" value="StudyStrides contact">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://studystrides.com.au/contact/?sent=1">
+      <form id="contact-form" class="form" action="https://vjcvlfkrhshydjpldaxo.supabase.co/functions/v1/send-form" method="POST">
+        <input type="hidden" name="_form" value="Hub contact">
+        <input type="hidden" name="_return" value="https://studystrides.com.au/contact/">
         <p class="honey">
           <label>Leave this field empty<input type="text" name="_honey" tabindex="-1" autocomplete="off" data-clarity-mask="true"></label>
         </p>
@@ -89,9 +89,12 @@
   </div>
 </footer>
 <script>
-  if (new URLSearchParams(location.search).has("sent")) {
+  var params = new URLSearchParams(location.search);
+  if (params.has("sent")) {
     document.getElementById("thanks").hidden = false;
     document.getElementById("contact-form").hidden = true;
+  } else if (params.has("error")) {
+    document.getElementById("form-error").hidden = false;
   }
 </script>
 </body>

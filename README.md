@@ -11,8 +11,8 @@ Live at [studystrides.com.au](https://studystrides.com.au/) (the `CNAME` file se
 
 Logo files live in `assets/`. Favicons sit in the site root.
 
-## Contact form
+## Forms
 
-The contact form posts to FormSubmit using the activated alias string in `contact/index.html` (not the inbox address), so the support inbox does not appear on the public page. No API key or other secret is stored in this repo.
+The contact form and the For Schools form post to the shared StudyStrides send-form endpoint at `https://vjcvlfkrhshydjpldaxo.supabase.co/functions/v1/send-form`. No API key or other secret is stored in this repo.
 
-After sending, the form returns the visitor to `https://studystrides.com.au/contact/?sent=1`, which shows a short thank-you line. Replies go straight back to the address entered in the Email field.
+After a successful send, the visitor returns to the same page with `?sent=1`, which shows a short thank-you. On the For Schools page, that thank-you also asks the school to fill in the options page for the course they chose. If sending fails, the page shows `?error=1` and asks the visitor to email support@studystrides.com.au. Replies go to the address entered in the email field.

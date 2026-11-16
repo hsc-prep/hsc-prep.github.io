@@ -292,6 +292,41 @@ img { max-width: 100%; }
 
 .sent p { margin: 0; }
 
+.options-next {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.options-next p { margin: 0 0 8px; }
+
+.options-next ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.options-next li + li { margin-top: 6px; }
+
+.options-next a,
+.form-error a {
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--marigold);
+  text-underline-offset: 3px;
+}
+
+.form-error {
+  max-width: 36rem;
+  margin: 0 0 12px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-left: 4px solid #8d2f2f;
+  border-radius: 12px;
+  padding: 16px 18px;
+}
+
+.form-error p { margin: 0; }
+
 .about-marks {
   display: flex;
   flex-wrap: wrap;
