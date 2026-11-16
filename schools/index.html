@@ -54,6 +54,8 @@
   .page-schools .form textarea { padding: 10px 12px; }
   .page-schools .form select { padding-right: 36px; }
   .page-schools .form textarea { min-height: 0; height: 120px; resize: vertical; }
+  .page-schools .sent,
+  .page-schools .form-error { max-width: none; }
   .schools-wrap { width: min(1040px, calc(100% - 28px)); margin-inline: auto; }
   .schools-layout { display: flex; gap: 32px; align-items: flex-start; }
   .schools-layout > .schools-box { flex: 1 1 36rem; }
@@ -95,19 +97,26 @@
   <div class="schools-wrap">
     <div class="prose">
       <h1>For Schools</h1>
-      <p>Request an invoice for student subscriptions. We will send a tax invoice to your school and set up student accounts once payment is received.</p>
+      <p>Request an invoice for student subscriptions. We will send a tax invoice to you for your school and set up student accounts once payment is received.</p>
     </div>
     <div class="schools-layout">
     <div class="schools-box">
+      <div id="form-error" class="form-error" hidden>
+        <p><strong>Request not sent.</strong> Please try again, or email <a href="mailto:support@studystrides.com.au">support@studystrides.com.au</a>.</p>
+      </div>
       <div id="thanks" class="sent" hidden>
         <p><strong>Request sent.</strong> Thank you. We will be in touch with an invoice and account details.</p>
+        <div id="options-next" class="options-next">
+          <p><strong>Step 2.</strong> <span id="options-lead">Fill in your school’s options page so we can set student accounts up the way you teach the course.</span></p>
+          <ul>
+            <li id="options-sor"><a href="https://sor.studystrides.com.au/sor_school_options.html" target="_blank" rel="noopener noreferrer">Studies of Religion options page</a></li>
+            <li id="options-geo"><a href="https://geo.studystrides.com.au/geo_school_options.html" target="_blank" rel="noopener noreferrer">Geography options page</a></li>
+          </ul>
+        </div>
       </div>
-      <!-- Posts via FormSubmit using the activated alias string, so no email address appears in the page. -->
-      <form id="schools-form" class="form" action="https://formsubmit.co/5f8900beea31229b72fd30f6505961b3" method="POST">
-        <input type="hidden" name="_subject" value="StudyStrides school invoice request">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://studystrides.com.au/schools/?sent=1">
+      <form id="schools-form" class="form" action="https://vjcvlfkrhshydjpldaxo.supabase.co/functions/v1/send-form" method="POST">
+        <input type="hidden" name="_form" value="Hub for schools">
+        <input type="hidden" name="_return" value="https://studystrides.com.au/schools/">
         <p class="honey">
           <label>Leave this field empty<input type="text" name="_honey" tabindex="-1" autocomplete="off" data-clarity-mask="true"></label>
         </p>
@@ -120,6 +129,7 @@
               <option value="" disabled selected>Select a course</option>
               <option value="Studies of Religion HSC">Studies of Religion HSC</option>
               <option value="Geography HSC">Geography HSC</option>
+              <option value="Studies of Religion and Geography HSC">Both courses</option>
             </select>
           </label>
         </div>
@@ -142,7 +152,7 @@
       <div class="info-card">
         <h3>What happens next</h3>
         <ul>
-          <li>We send a tax invoice to your school</li>
+          <li>We send a tax invoice to you for your school</li>
           <li>Once payment is received, student accounts are created</li>
           <li>Students receive a login email with access instructions</li>
         </ul>
@@ -168,9 +178,36 @@
   </div>
 </footer>
 <script>
-  if (new URLSearchParams(location.search).has("sent")) {
+  var SCHOOLS_COURSE_KEY = "hub-schools-course";
+  var schoolsForm = document.getElementById("schools-form");
+  schoolsForm.addEventListener("submit", function () {
+    try {
+      sessionStorage.setItem(SCHOOLS_COURSE_KEY, schoolsForm.elements.course.value);
+    } catch (err) {}
+  });
+
+  var params = new URLSearchParams(location.search);
+  if (params.has("sent")) {
     document.getElementById("thanks").hidden = false;
-    document.getElementById("schools-form").hidden = true;
+    schoolsForm.hidden = true;
+    var course = "";
+    try { course = sessionStorage.getItem(SCHOOLS_COURSE_KEY) || ""; } catch (err) {}
+    var wantsSor = /religion/i.test(course);
+    var wantsGeo = /geography/i.test(course);
+    var lead = document.getElementById("options-lead");
+    if (wantsSor && !wantsGeo) {
+      document.getElementById("options-geo").hidden = true;
+      lead.textContent = "Fill in your school’s Studies of Religion options page so we can set student accounts up the way you teach the course.";
+    } else if (wantsGeo && !wantsSor) {
+      document.getElementById("options-sor").hidden = true;
+      lead.textContent = "Fill in your school’s Geography options page so we can set student accounts up the way you teach the course.";
+    } else if (wantsSor && wantsGeo) {
+      lead.textContent = "Fill in the options page for each course so we can set student accounts up the way you teach them.";
+    } else {
+      lead.textContent = "Fill in the options page for the course you requested. If you requested both courses, fill in each page.";
+    }
+  } else if (params.has("error")) {
+    document.getElementById("form-error").hidden = false;
   }
 </script>
 </body>
